@@ -236,8 +236,9 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/2.example")}
             textSize={'1.4rem'}
             ranges={[
-              { loc: [0, 4], title: 'Shadow DOM'  },
-              { loc: [7, 11] },
+              { loc: [0, 1], title: 'Shadow DOM'  },
+              { loc: [1, 5] },
+              { loc: [8, 12] },
             ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
