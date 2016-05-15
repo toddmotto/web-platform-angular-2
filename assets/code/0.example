@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Angular 2</title>
+    <base href="/">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/angular2-polyfills.js"></script>
+    <script src="/system.js"></script>
+    <script src="/typescript.js"></script>
+    <script src="/Rx.js"></script>
+    <script src="/angular2.dev.js"></script>
+    <script src="/router.dev.js"></script>
+    <script>
+    System.config({
+      transpiler: 'typescript',
+      typescriptOptions: {
+        emitDecoratorMetadata: true
+      },
+      map: {
+        app: './js'
+      },
+      packages: {
+        app: {
+          main: './main.ts',
+          defaultExtension: 'ts'
+        }
+      }
+    });
+    System
+      .import('app')
+      .catch(console.error.bind(console));
+    </script>
+  </head>
+  <body>
+    <app>
+      Loading...
+    </app>
+    <script src="bundle.js"></script>
+  </body>
+</html>

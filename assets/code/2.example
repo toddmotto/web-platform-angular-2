@@ -1,0 +1,26 @@
+// app.component.ts
+import {
+  Component,
+  ViewEncapsulation
+} from '@angular/core';
+
+@Component({
+  selector: 'app',
+  encapsulation: ViewEncapsulation.Native,
+  styles: [`
+    .app { background: red; padding: 25px; }
+  `],
+  template: `
+    <div class="app">
+      {{ message }}
+    </div>
+  `
+})
+export class AppComponent {
+  constructor() {
+    this.message = 'Hello world';
+  }
+  ngOnInit() {
+    console.log('Component initialised');
+  }
+}

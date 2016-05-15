@@ -1,6 +1,7 @@
 // Import React
 import React from "react";
 import { render } from "react-dom";
+import CodeSlide from 'spectacle-code-slide';
 
 // Import Spectacle Core tags
 import {
@@ -190,21 +191,54 @@ export default class Presentation extends React.Component {
             </List>
           </Slide>
 
-          <Slide transition={["slide"]}>
-            <CodePane lang="javascript" textSize={'1.6rem'}>
-              {
-                `Scope {
-  $$watchers: [{
-    eq: false,
-    exp: function () {},
-    fn: function (newValue, oldValue) {},
-    get: function () {},
-    last: 'Todd'
-  }]
-}`
-              }
-            </CodePane>
-          </Slide>
+          <CodeSlide
+            transition={[]}
+            lang="html"
+            code={require("raw!../assets/code/0.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [4, 5], title: 'HTML and System.js' },
+              { loc: [6, 12] },
+              { loc: [13, 31] },
+              { loc: [34, 38] }
+            ]}/>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/bootstrap.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 1], title: 'Bootstrapping' },
+              { loc: [1, 2] },
+              { loc: [2, 3] },
+              { loc: [4, 5] },
+            ]}/>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/1.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 1], title: 'Root component' },
+              { loc: [1, 2] },
+              { loc: [3, 11] },
+              { loc: [11, 19] },
+              { loc: [3, 4] },
+              { loc: [4, 5] },
+              { loc: [4, 10] },
+            ]}/>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/2.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 4], title: 'Shadow DOM'  },
+              { loc: [7, 11] },
+            ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
             <Image src={images.front} style={{maxWidth: '40%'}}/>
