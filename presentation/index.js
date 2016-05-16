@@ -177,7 +177,7 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
             <Image src={images.front} style={{maxWidth: '40%'}}/>
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
-              Angular 2 implementation
+              Angular 2
             </Heading>
           </Slide>
 
