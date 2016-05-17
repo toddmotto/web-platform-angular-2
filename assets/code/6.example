@@ -1,0 +1,42 @@
+// chat-profile.component.ts
+import {
+  Component,
+  ViewEncapsulation
+} from '@angular/core';
+
+@Component({
+  selector: 'chat-profile',
+  styles: [`
+    .chat__profile {
+      background: red; border: 1px dotted green;
+    }
+  `],
+  template: `
+    <div class="chat__profile">
+      Logged in as {{ user.name }} - {{ userStatus }}
+      <a href="" (click)="changeStatus()">
+        Change status
+      </a>
+    </div>
+  `
+})
+export class ChatProfileComponent {
+  @Input() user = '';
+  @Output() statusChange = new EventEmitter();
+  constructor() {
+    this.userStatus = (
+      this.user.online ? 'Online' : 'Offline'
+    );
+  }
+  changeStatus() {
+    let newStatus = !this.user.online;
+    let user = {
+      name: this.user.name,
+      online: newStatus
+    };
+    this.userStatus = (
+      newStatus ? 'Online' : 'Offline'
+    );
+    this.statusChange.emit({ user });
+  }
+}

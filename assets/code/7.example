@@ -1,0 +1,48 @@
+// app.component.ts
+import {
+  Component
+} from '@angular/core';
+import {
+  Routes,
+  ROUTER_DIRECTIVES
+} from '@angular/router';
+import {
+  InboxComponent
+} from './components/inbox.component';
+import {
+  InboxMessageComponent
+} from './components/inbox-message.component';
+import {
+  DashboardComponent
+} from './components/dashboard.component';
+
+@Component({
+  selector: 'app',
+  template: `
+    <div class="app">
+      <nav>
+        <a [routerLink]="['/inbox']">Inbox</a>
+        <a [routerLink]="['/dashboard']">Dashboard</a>
+      </nav>
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+      <aside>
+        <chat></chat>
+      </aside>
+    </div>
+  `,
+  directives: [
+    ROUTER_DIRECTIVES,
+    ChatComponent
+  ]
+})
+@Routes([
+  { path: '/inbox',     component: InboxComponent },
+  { path: '/inbox/:id', component: InboxMessageComponent },
+  { path: '/dashboard', component: DashboardComponent }
+])
+export class AppComponent {
+  constructor() {}
+  ngOnInit() {}
+}

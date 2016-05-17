@@ -1,0 +1,55 @@
+// chat.component.ts
+import {
+  Component,
+  ViewEncapsulation
+} from '@angular/core';
+import {
+  ChatProfileComponent
+} from './components/chat-profile.component';
+import {
+  ChatSearchComponent
+} from './components/chat-search.component';
+import {
+  ChatListComponent
+} from './components/chat-list.component';
+
+@Component({
+  selector: 'chat',
+  encapsulation: ViewEncapsulation.Native,
+  styles: [`
+    .chat {
+      background: blue; padding: 15px;
+    }
+  `],
+  template: `
+    <div class="chat">
+      <chat-profile 
+        [user]="user">
+      </chat-profile>
+      <chat-search
+        [term]="term">
+      </chat-search>
+      <chat-list
+        [friends]="friends">
+      </chat-list>
+    </div>
+  `,
+  directives: [
+    ChatProfileComponent,
+    ChatSearchComponent,
+    ChatListComponent
+  ]
+})
+export class ChatComponent {
+  constructor() {
+    this.user = {
+      name: 'Todd Motto',
+      online: true
+    };
+    this.term = '';
+    this.friends = [{...}, {...}];
+  }
+  ngOnInit() {
+    console.log('Component initialised');
+  }
+}

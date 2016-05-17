@@ -1,20 +1,23 @@
 // app.component.ts
 import {
-  Component,
-  ViewEncapsulation
+  Component
 } from '@angular/core';
+import {
+  ChatComponent
+} from './components/chat.component';
 
 @Component({
   selector: 'app',
-  encapsulation: ViewEncapsulation.Native,
-  styles: [`
-    .app { background: red; padding: 25px; }
-  `],
   template: `
     <div class="app">
-      {{ message }}
+      <main>
+        <chat></chat>
+      </main>
     </div>
-  `
+  `,
+  directives: [
+    ChatComponent
+  ]
 })
 export class AppComponent {
   constructor() {

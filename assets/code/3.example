@@ -1,0 +1,42 @@
+// chat.component.ts
+import {
+  Component,
+  ViewEncapsulation
+} from '@angular/core';
+import {
+  ChatProfileComponent
+} from './components/chat-profile.component';
+import {
+  ChatSearchComponent
+} from './components/chat-search.component';
+import {
+  ChatListComponent
+} from './components/chat-list.component';
+
+@Component({
+  selector: 'chat',
+  encapsulation: ViewEncapsulation.Native,
+  styles: [`
+    .chat {
+      background: blue; padding: 15px;
+    }
+  `],
+  template: `
+    <div class="chat">
+      <chat-profile></chat-profile>
+      <chat-search></chat-search>
+      <chat-list></chat-list>
+    </div>
+  `,
+  directives: [
+    ChatProfileComponent,
+    ChatSearchComponent,
+    ChatListComponent
+  ]
+})
+export class ChatComponent {
+  constructor() {}
+  ngOnInit() {
+    console.log('Component initialised');
+  }
+}

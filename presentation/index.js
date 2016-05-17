@@ -84,7 +84,7 @@ export default class Presentation extends React.Component {
         <Deck controls={false} progress="bar" transition={["zoom", "slide"]} transitionDuration={500}>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
-            <Image src={images.front} style={{maxWidth: '40%'}}/>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
               Taking over the web
             </Heading>
@@ -138,7 +138,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
-            <Image src={images.front} style={{maxWidth: '40%'}}/>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
               Component architecture
             </Heading>
@@ -161,7 +161,7 @@ export default class Presentation extends React.Component {
           <Slide transition={[""]} bgColor="tertiary" bgImage={images.architecture14}></Slide>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
-            <Image src={images.front} style={{maxWidth: '40%'}}/>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
               Types of Components
             </Heading>
@@ -175,7 +175,7 @@ export default class Presentation extends React.Component {
           <Slide transition={[""]} bgColor="tertiary" bgImage={images.type6}></Slide>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
-            <Image src={images.front} style={{maxWidth: '40%'}}/>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
               Angular 2
             </Heading>
@@ -189,6 +189,13 @@ export default class Presentation extends React.Component {
               <ListItem>Routing</ListItem>
               <ListItem>DOM renderer</ListItem>
             </List>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Bootstrapping
+            </Heading>
           </Slide>
 
           <CodeSlide
@@ -215,6 +222,13 @@ export default class Presentation extends React.Component {
               { loc: [4, 5] },
             ]}/>
 
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Components
+            </Heading>
+          </Slide>
+
           <CodeSlide
             transition={[]}
             lang="js"
@@ -236,15 +250,100 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/2.example")}
             textSize={'1.4rem'}
             ranges={[
-              { loc: [0, 1], title: 'Shadow DOM'  },
+              { loc: [0, 1], title: 'Import Component(s)'  },
               { loc: [1, 5] },
               { loc: [8, 12] },
             ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
-            <Image src={images.front} style={{maxWidth: '40%'}}/>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
-              Server and WebWorker rendering
+              Child Components
+            </Heading>
+          </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/3.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 1], title: 'Child Component'  },
+              { loc: [1, 5] },
+              { loc: [8, 12] },
+            ]}/>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              One-way data flow
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <List textColor="white">
+              <ListItem>Data down, events up</ListItem>
+              <ListItem>Components are APIs</ListItem>
+              <ListItem>"What does your Component even do?"</ListItem>
+              <ListItem>Well-defined Inputs/Outputs</ListItem>
+            </List>
+          </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/4.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 1], title: 'Property binding' },
+              { loc: [1, 5] },
+              { loc: [58, 62] },
+            ]}/>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/5.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 1], title: 'Event binding' },
+              { loc: [1, 5] },
+              { loc: [58, 62] },
+            ]}/>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/6.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 1], title: '@Input + @Output' },
+              { loc: [1, 5] },
+              { loc: [58, 62] },
+            ]}/>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Routing + Routed Components
+            </Heading>
+          </Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/7.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 1], title: '@Routes' },
+              { loc: [1, 5] },
+              { loc: [58, 62] },
+            ]}/>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Server + WebWorker rendering
             </Heading>
           </Slide>
 
