@@ -1,7 +1,5 @@
 // app.component.ts
-import {
-  Component
-} from '@angular/core';
+import {Component} from '@angular/core';
 import {
   ChatComponent
 } from './components/chat.component';

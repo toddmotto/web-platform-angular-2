@@ -42,6 +42,7 @@ import {
     ChatListComponent
   ]
 })
+
 export class ChatComponent {
   constructor() {
     this.user = {

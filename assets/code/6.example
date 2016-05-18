@@ -1,7 +1,9 @@
 // chat-profile.component.ts
 import {
   Component,
-  ViewEncapsulation
+  Input,
+  Output,
+  EventEmitter
 } from '@angular/core';
 
 @Component({
@@ -13,7 +15,7 @@ import {
   `],
   template: `
     <div class="chat__profile">
-      Logged in as {{ user.name }} - {{ userStatus }}
+      Welcome, {{ user.name }} - {{ userStatus }}
       <a href="" (click)="changeStatus()">
         Change status
       </a>
@@ -21,7 +23,7 @@ import {
   `
 })
 export class ChatProfileComponent {
-  @Input() user = '';
+  @Input() user;
   @Output() statusChange = new EventEmitter();
   constructor() {
     this.userStatus = (

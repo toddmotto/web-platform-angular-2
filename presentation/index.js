@@ -222,13 +222,6 @@ export default class Presentation extends React.Component {
               { loc: [4, 5] },
             ]}/>
 
-          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
-            <Image src={images.front} style={{maxWidth: '40%'}} />
-            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
-              Components
-            </Heading>
-          </Slide>
-
           <CodeSlide
             transition={[]}
             lang="js"
@@ -242,6 +235,7 @@ export default class Presentation extends React.Component {
               { loc: [3, 4] },
               { loc: [4, 5] },
               { loc: [4, 10] },
+              { loc: [13, 14] },
             ]}/>
 
           <CodeSlide
@@ -251,8 +245,9 @@ export default class Presentation extends React.Component {
             textSize={'1.4rem'}
             ranges={[
               { loc: [0, 1], title: 'Import Component(s)'  },
-              { loc: [1, 5] },
-              { loc: [8, 12] },
+              { loc: [2, 5] },
+              { loc: [15, 18] },
+              { loc: [9, 14] },
             ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
@@ -270,7 +265,14 @@ export default class Presentation extends React.Component {
             ranges={[
               { loc: [0, 1], title: 'Child Component'  },
               { loc: [1, 5] },
-              { loc: [8, 12] },
+              { loc: [16, 17] },
+              { loc: [5, 8] },
+              { loc: [8, 11] },
+              { loc: [11, 15] },
+              { loc: [30, 35] },
+              { loc: [23, 30] },
+              { loc: [18, 23] },
+              { loc: [17, 18] },
             ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
@@ -284,8 +286,8 @@ export default class Presentation extends React.Component {
             <List textColor="white">
               <ListItem>Data down, events up</ListItem>
               <ListItem>Components are APIs</ListItem>
-              <ListItem>"What does your Component even do?"</ListItem>
               <ListItem>Well-defined Inputs/Outputs</ListItem>
+              <ListItem>"What role does your Component play?"</ListItem>
             </List>
           </Slide>
 
@@ -297,7 +299,13 @@ export default class Presentation extends React.Component {
             ranges={[
               { loc: [0, 1], title: 'Property binding' },
               { loc: [1, 5] },
-              { loc: [58, 62] },
+              { loc: [42, 55] },
+              { loc: [44, 48] },
+              { loc: [25, 28] },
+              { loc: [48, 49] },
+              { loc: [28, 31] },
+              { loc: [49, 50] },
+              { loc: [31, 35] },
             ]}/>
 
           <CodeSlide
@@ -307,9 +315,18 @@ export default class Presentation extends React.Component {
             textSize={'1.4rem'}
             ranges={[
               { loc: [0, 1], title: 'Event binding' },
-              { loc: [1, 5] },
-              { loc: [58, 62] },
+              { loc: [53, 60] },
+              { loc: [53, 56] },
+              { loc: [25, 29] },
+              { loc: [56, 60] },
             ]}/>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              [slide on property binding + events]
+            </Heading>
+          </Slide>
 
           <CodeSlide
             transition={[]}
@@ -318,8 +335,11 @@ export default class Presentation extends React.Component {
             textSize={'1.4rem'}
             ranges={[
               { loc: [0, 1], title: '@Input + @Output' },
-              { loc: [1, 5] },
-              { loc: [58, 62] },
+              { loc: [1, 7] },
+              { loc: [8, 24] },
+              { loc: [24, 32] },
+              { loc: [32, 44] },
+              { loc: [18, 21] },
             ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
