@@ -24,15 +24,16 @@ import {
   template: `
     <div class="chat">
       <chat-profile 
-        [user]="user"
+        [user]="chatUser"
         (statusChange)="onStatusChange($event)">
       </chat-profile>
       <chat-search
-        [term]="term"
+        [term]="chatTerm"
         (searchChange)="onSearchChange($event)">
       </chat-search>
       <chat-list
-        [friends]="friends">
+        [friends]="chatFriends"
+        (contactSelect)="onContactSelect($event)">
       </chat-list>
     </div>
   `,
@@ -45,19 +46,22 @@ import {
 
 export class ChatComponent {
   constructor() {
-    this.user = {
+    this.chatUser = {
       name: 'Todd Motto',
       online: true
     };
-    this.term = '';
-    this.friends = [{...}, {...}];
+    this.chatTerm = '';
+    this.chatFriends = [{...}, {...}];
   }
   onStatusChange(event) {
-    // do something with `event.user`
+    // user changes their status
   }
   onSearchChange(event) {
-    // filter collection via `event.term`
+    // user enters info to search users
     this.friends = [<filtered-collection>];
+  }
+  onContactSelect(event) {
+    // user selects new contact to chat
   }
   ngOnInit() {
     console.log('Component initialised');

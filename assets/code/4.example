@@ -24,13 +24,13 @@ import {
   template: `
     <div class="chat">
       <chat-profile 
-        [user]="user">
+        [user]="chatUser">
       </chat-profile>
       <chat-search
-        [term]="term">
+        [term]="chatTerm">
       </chat-search>
       <chat-list
-        [friends]="friends">
+        [friends]="chatFriends">
       </chat-list>
     </div>
   `,
@@ -42,12 +42,12 @@ import {
 })
 export class ChatComponent {
   constructor() {
-    this.user = {
+    this.chatUser = {
       name: 'Todd Motto',
       online: true
     };
-    this.term = '';
-    this.friends = [{...}, {...}];
+    this.chatTerm = '';
+    this.chatFriends = [{...}, {...}];
   }
   ngOnInit() {
     console.log('Component initialised');

@@ -16,7 +16,7 @@ import {
   template: `
     <div class="chat__profile">
       Welcome, {{ user.name }} - {{ userStatus }}
-      <a href="" (click)="changeStatus()">
+      <a href="" (click)="toggleStatus()">
         Change status
       </a>
     </div>
@@ -30,7 +30,7 @@ export class ChatProfileComponent {
       this.user.online ? 'Online' : 'Offline'
     );
   }
-  changeStatus() {
+  toggleStatus() {
     let newStatus = !this.user.online;
     let user = {
       name: this.user.name,

@@ -120,7 +120,7 @@ export default class Presentation extends React.Component {
               <ListItem>Cutting edge and future focused</ListItem>
               <ListItem>Component-based architecture framework</ListItem>
               <ListItem>Web, mobile web</ListItem>
-              <ListItem>Native mobile and desktop</ListItem>
+              <ListItem>Native mobile (NativeScript) and desktop</ListItem>
             </List>
           </Slide>
 
@@ -183,11 +183,12 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["slide"]}>
             <List textColor="white">
+              <ListItem>Component architecture</ListItem>
               <ListItem>Bootstrapping</ListItem>
-              <ListItem>Components, ViewEncapsulation</ListItem>
+              <ListItem>Components + Shadow DOM</ListItem>
               <ListItem>One-way dataflow</ListItem>
+              <ListItem>Property and event binding</ListItem>
               <ListItem>Routing</ListItem>
-              <ListItem>DOM renderer</ListItem>
             </List>
           </Slide>
 
@@ -298,7 +299,7 @@ export default class Presentation extends React.Component {
             textSize={'1.4rem'}
             ranges={[
               { loc: [0, 1], title: 'Property binding' },
-              { loc: [1, 5] },
+              // { loc: [1, 5] },
               { loc: [42, 55] },
               { loc: [44, 48] },
               { loc: [25, 28] },
@@ -315,10 +316,13 @@ export default class Presentation extends React.Component {
             textSize={'1.4rem'}
             ranges={[
               { loc: [0, 1], title: 'Event binding' },
-              { loc: [53, 60] },
-              { loc: [53, 56] },
+              { loc: [55, 65] },
+              { loc: [55, 58] },
               { loc: [25, 29] },
-              { loc: [56, 60] },
+              { loc: [58, 61] },
+              { loc: [29, 33] },
+              { loc: [62, 65] },
+              { loc: [33, 37] },
             ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
@@ -339,7 +343,7 @@ export default class Presentation extends React.Component {
               { loc: [8, 24] },
               { loc: [24, 32] },
               { loc: [32, 44] },
-              { loc: [18, 21] },
+              { loc: [17, 21] },
             ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
