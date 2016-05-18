@@ -116,7 +116,7 @@ export default class Presentation extends React.Component {
               <ListItem>Types of Components</ListItem>
               <ListItem>Angular 2 implementation</ListItem>
               <ListItem>Bootstrapping, Components, Routing</ListItem>
-              <ListItem>Server-side and WebWorker rendering</ListItem>
+              <ListItem>Server-side and Web Worker rendering</ListItem>
             </List>
           </Slide>
 
@@ -127,10 +127,23 @@ export default class Presentation extends React.Component {
             <List textColor="white">
               <ListItem>Successor to Angular 1.x</ListItem>
               <ListItem>Cutting edge and future focused</ListItem>
-              <ListItem>Component-based architecture framework</ListItem>
+              <ListItem>Sits on top of the web platform</ListItem>
+              <ListItem>Component-based architecture</ListItem>
               <ListItem>Web, mobile web</ListItem>
               <ListItem>Native mobile (NativeScript) and desktop</ListItem>
             </List>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Heading size={1} caps lineHeight={1} style={headingFont} textColor="white">
+              Think of Angular 2
+            </Heading>
+            <Heading size={1} caps lineHeight={1} style={headingFont} textColor="white">
+              as a platform
+            </Heading>
+            <Heading size={1} caps lineHeight={1} style={headingFont} textColor="white">
+              not a framework
+            </Heading>
           </Slide>
 
           <Slide transition={["slide"]}>
@@ -199,6 +212,15 @@ export default class Presentation extends React.Component {
           <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow2}></Slide>
           <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow3}></Slide>
           <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow4}></Slide>
+
+          <Slide transition={["slide"]}>
+            <List textColor="white">
+              <ListItem>Data down, events up</ListItem>
+              <ListItem>Components are APIs</ListItem>
+              <ListItem>Well-defined Inputs/Outputs</ListItem>
+              <ListItem>"What role does your Component play?"</ListItem>
+            </List>
+          </Slide>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
             <Image src={images.front} style={{maxWidth: '40%'}} />
@@ -309,15 +331,6 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]}>
-            <List textColor="white">
-              <ListItem>Data down, events up</ListItem>
-              <ListItem>Components are APIs</ListItem>
-              <ListItem>Well-defined Inputs/Outputs</ListItem>
-              <ListItem>"What role does your Component play?"</ListItem>
-            </List>
-          </Slide>
-
           <CodeSlide
             transition={[]}
             lang="js"
@@ -402,8 +415,84 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
             <Image src={images.front} style={{maxWidth: '40%'}} />
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
-              Server + WebWorker rendering
+              Server-side + Web Worker rendering
             </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Server-side rendering
+            </Heading>
+            <List textColor="white">
+              <ListItem>DOM abstracted, use abstraction methods</ListItem>
+              <ListItem>Render on the server, Universal Angular</ListItem>
+              <ListItem>Initial page pre-rendered superfast</ListItem>
+              <ListItem>Rehydrates the DOM once rendered</ListItem>
+            </List>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Web Worker rendering
+            </Heading>
+            <List textColor="white">
+              <ListItem>Runs in a background thread</ListItem>
+              <ListItem>Frees up the UI thread</ListItem>
+              <ListItem>Angular bootstraps in a Web Worker</ListItem>
+              <ListItem>Superfast UI and data-processing (faster repaints)</ListItem>
+              <ListItem>Angular communicates between UI + Web Worker</ListItem>
+            </List>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Service Workers
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Service Workers
+            </Heading>
+            <List textColor="white">
+              <ListItem>Cache code and application data</ListItem>
+              <ListItem>Works offline with last data renders</ListItem>
+              <ListItem>Background synchronisation</ListItem>
+            </List>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Few more features
+            </Heading>
+            <List textColor="white">
+              <ListItem>Sits on top of web components (template/content)</ListItem>
+              <ListItem>Uses dependency injection</ListItem>
+              <ListItem>Still has Directives (Angular 1.x)</ListItem>
+              <ListItem>Well-defined Component lifecycles</ListItem>
+              <ListItem>Easily testable (unit/e2e)</ListItem>
+            </List>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              ... and some more
+            </Heading>
+            <List textColor="white">
+              <ListItem>Component communication</ListItem>
+              <ListItem>Observables (RxJS)</ListItem>
+              <ListItem>Nested views and routes</ListItem>
+              <ListItem>Data architecture (Redux/ngrx)</ListItem>
+              <ListItem>And the rest... for another talk</ListItem>
+            </List>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              Thank you!
+            </Heading>
+            <Image src={images.twitter} style={{maxWidth: '60%'}} />
           </Slide>
 
         </Deck>
