@@ -254,7 +254,7 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
             <Image src={images.front} style={{maxWidth: '40%'}} />
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
-              Child Components
+              Stateful and Stateless Components
             </Heading>
           </Slide>
 
@@ -264,7 +264,7 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/3.example")}
             textSize={'1.4rem'}
             ranges={[
-              { loc: [0, 1], title: 'Child Component'  },
+              { loc: [0, 1], title: 'Stateful Component'  },
               { loc: [1, 5] },
               { loc: [16, 17] },
               { loc: [5, 8] },
@@ -338,7 +338,7 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/6.example")}
             textSize={'1.4rem'}
             ranges={[
-              { loc: [0, 1], title: '@Input + @Output' },
+              { loc: [0, 1], title: 'Stateless Component' },
               { loc: [1, 7] },
               { loc: [8, 24] },
               { loc: [24, 32] },
@@ -359,9 +359,11 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/7.example")}
             textSize={'1.4rem'}
             ranges={[
-              { loc: [0, 1], title: '@Routes' },
-              { loc: [1, 5] },
-              { loc: [58, 62] },
+              { loc: [0, 1], title: 'Routed Components' },
+              { loc: [4, 8] },
+              { loc: [34, 38] },
+              { loc: [26, 32] },
+              { loc: [23, 25] },
             ]}/>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
