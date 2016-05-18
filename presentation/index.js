@@ -61,7 +61,16 @@ const images = {
   architecture12: require("../assets/architecture/c-12.jpg"),
   architecture13: require("../assets/architecture/c-13.jpg"),
   architecture14: require("../assets/architecture/c-14.jpg"),
-
+  flow0: require("../assets/flow/0.jpg"),
+  flow1: require("../assets/flow/1.jpg"),
+  flow2: require("../assets/flow/2.jpg"),
+  flow3: require("../assets/flow/3.jpg"),
+  flow4: require("../assets/flow/4.jpg"),
+  flow5: require("../assets/flow/5.jpg"),
+  flow6: require("../assets/flow/6.jpg"),
+  flow7: require("../assets/flow/7.jpg"),
+  flow8: require("../assets/flow/8.jpg"),
+  flow9: require("../assets/flow/9.jpg"),
 };
 
 preloader(images);
@@ -173,6 +182,23 @@ export default class Presentation extends React.Component {
           <Slide transition={[""]} bgColor="tertiary" bgImage={images.type4}></Slide>
           <Slide transition={[""]} bgColor="tertiary" bgImage={images.type5}></Slide>
           <Slide transition={[""]} bgColor="tertiary" bgImage={images.type6}></Slide>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
+            <Image src={images.front} style={{maxWidth: '40%'}} />
+            <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
+              One-way data flow
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.flow0}></Slide>
+          <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow6}></Slide>
+          <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow7}></Slide>
+          <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow8}></Slide>
+          <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow9}></Slide>
+          <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow1}></Slide>
+          <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow2}></Slide>
+          <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow3}></Slide>
+          <Slide transition={[""]} bgColor="tertiary" bgImage={images.flow4}></Slide>
 
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
             <Image src={images.front} style={{maxWidth: '40%'}} />
@@ -325,11 +351,16 @@ export default class Presentation extends React.Component {
               { loc: [33, 37] },
             ]}/>
 
-          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
-            <Image src={images.front} style={{maxWidth: '40%'}} />
+          <Slide transition={["slide"]}>
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
-              [slide on property binding + events]
+              Templating syntaxes
             </Heading>
+            <List textColor="white">
+              <ListItem>[ ] are property bindings</ListItem>
+              <ListItem>Think myObject['property'] in JavaScript</ListItem>
+              <ListItem>( ) are event bindings</ListItem>
+              <ListItem>Think myFunction() in JavaScript</ListItem>
+            </List>
           </Slide>
 
           <CodeSlide
@@ -361,6 +392,8 @@ export default class Presentation extends React.Component {
             ranges={[
               { loc: [0, 1], title: 'Routed Components' },
               { loc: [4, 8] },
+              { loc: [8, 17] },
+              { loc: [39, 48] },
               { loc: [34, 38] },
               { loc: [26, 32] },
               { loc: [23, 25] },
