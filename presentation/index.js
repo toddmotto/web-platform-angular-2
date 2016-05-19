@@ -71,6 +71,7 @@ const images = {
   flow7: require("../assets/flow/7.jpg"),
   flow8: require("../assets/flow/8.jpg"),
   flow9: require("../assets/flow/9.jpg"),
+  google: require("../assets/google.png"),
 };
 
 preloader(images);
@@ -112,9 +113,10 @@ export default class Presentation extends React.Component {
             </Heading>
             <List textColor="white">
               <ListItem>Component architecture</ListItem>
-              <ListItem>Web Component integration</ListItem>
               <ListItem>Types of Components</ListItem>
+              <ListItem>One-way dataflow</ListItem>
               <ListItem>Angular 2 implementation</ListItem>
+              <ListItem>Web Component integration</ListItem>
               <ListItem>Bootstrapping, Components, Routing</ListItem>
               <ListItem>Server-side and Web Worker rendering</ListItem>
             </List>
@@ -373,6 +375,42 @@ export default class Presentation extends React.Component {
               <ListItem>Think myObject['property'] in JavaScript</ListItem>
               <ListItem>( ) are event bindings</ListItem>
               <ListItem>Think myFunction() in JavaScript</ListItem>
+            </List>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.google}></Slide>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/syntax-2.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 4], title: 'Collections' },
+              { loc: [5, 8], title: 'Two-way binding' },
+              { loc: [9, 10] },
+            ]}/>
+
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            code={require("raw!../assets/code/syntax.example")}
+            textSize={'1.4rem'}
+            ranges={[
+              { loc: [0, 5], title: 'Other syntaxes' },
+              { loc: [6, 11] },
+              { loc: [12, 22] },
+            ]}/>
+
+          <Slide transition={["slide"]}>
+            <Heading size={1} caps lineHeight={1} style={headingFont} textColor="white">
+              Why?
+            </Heading>
+            <List textColor="white">
+              <ListItem>Bind to any native element (Web Components included)</ListItem>
+              <ListItem>No Angular 2 component wrappers</ListItem>
+              <ListItem>Consistent syntax across all code</ListItem>
+              <ListItem>Explicit syntax</ListItem>
             </List>
           </Slide>
 

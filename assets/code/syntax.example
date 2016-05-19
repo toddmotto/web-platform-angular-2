@@ -1,0 +1,22 @@
+<todo-cmp 
+  *ngFor="let t of todos; let i=index"
+  [model]="t" 
+  [index]="t">
+</todo-cmp>
+
+<todo-cmp 
+  template="ngFor: let t of todos; let i=index" 
+  [model]="t" 
+  [index]="i">
+</todo-cmp>
+
+<template 
+  ngFor 
+  [ngForOf]="todos" 
+  let-t="$implicit" 
+  let-i="index">
+    <todo-cmp 
+      [model]="t" 
+      [index]="i">
+    </todo-cmp>
+</template>

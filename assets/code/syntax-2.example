@@ -1,0 +1,10 @@
+// victorsavkin.com/post/119943127151/angular-2-template-syntax
+<div *ngFor="let item in items; var index = index">
+  {{ index }}
+</div>
+
+<input 
+  [ngModel]="todo.text" 
+  (ngModelChange)="todo.text=$event">
+
+<input [(ngModel)]="todo.text">
