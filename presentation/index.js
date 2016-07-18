@@ -40,6 +40,8 @@ const images = {
   bg: require("../assets/bg.png"),
   twitter: require("../assets/twitter.png"),
   front: require("../assets/angular.svg"),
+  telerik: require("../assets/telerik.svg"),
+  ngmigrate: require("../assets/ngmigrate.svg"),
   type1: require("../assets/types/1.jpg"),
   type2: require("../assets/types/2.jpg"),
   type3: require("../assets/types/3.jpg"),
@@ -96,10 +98,21 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="tertiary" bgImage={images.bg}>
             <Image src={images.front} style={{maxWidth: '40%'}} />
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
-              Taking over the web
+              Component architecture
             </Heading>
             <Heading size={1} fit caps lineHeight={1} style={headingFont} textColor="white">
-              with Angular 2
+              and Angular 2
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Image src={images.telerik} style={{maxWidth: '100%'}} />
+          </Slide>
+
+          <Slide transition={["slide"]}>
+            <Image src={images.ngmigrate} style={{maxWidth: '100%'}} />
+            <Heading size={5} caps lineHeight={1} style={headingFont} textColor="white">
+              ngmigrate.telerik.com
             </Heading>
           </Slide>
 
@@ -389,17 +402,6 @@ export default class Presentation extends React.Component {
               { loc: [0, 4], title: 'Collections' },
               { loc: [5, 8], title: 'Two-way binding' },
               { loc: [9, 10] },
-            ]}/>
-
-          <CodeSlide
-            transition={[]}
-            lang="js"
-            code={require("raw!../assets/code/syntax.example")}
-            textSize={'1.4rem'}
-            ranges={[
-              { loc: [0, 5], title: 'Other syntaxes' },
-              { loc: [6, 11] },
-              { loc: [12, 22] },
             ]}/>
 
           <Slide transition={["slide"]}>

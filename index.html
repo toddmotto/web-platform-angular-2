@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no" />
-    <title>Angular 2</title>
+    <title>Angular 2 Component Architecture</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
     <style>
     /**
@@ -224,19 +224,19 @@
           insertBefore: function (inside, before, insert, root) {
             root = root || _.languages;
             var grammar = root[inside];
-            
+
             if (arguments.length == 2) {
               insert = arguments[1];
-              
+
               for (var newToken in insert) {
                 if (insert.hasOwnProperty(newToken)) {
                   grammar[newToken] = insert[newToken];
                 }
               }
-              
+
               return grammar;
             }
-            
+
             var ret = {};
 
             for (var token in grammar) {
@@ -256,7 +256,7 @@
                 ret[token] = grammar[token];
               }
             }
-            
+
             // Update references in other language definitions
             _.languages.DFS(_.languages, function(key, value) {
               if (value === root[inside] && key != inside) {
@@ -284,7 +284,7 @@
           }
         },
         plugins: {},
-        
+
         highlightAll: function(async, callback) {
           var elements = document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code');
 
@@ -662,7 +662,7 @@
             alias: 'language-css'
           }
         });
-        
+
         Prism.languages.insertBefore('inside', 'attr-value', {
           'style-attr': {
             pattern: /\s*style=("|').*?\1/i,
